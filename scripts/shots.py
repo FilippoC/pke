@@ -21,5 +21,5 @@ shots = get_shots(video)
 print("shots : " + str(len(shots)))
 
 for shot in shots:
-    display_2_frames(shot[0], shot[1])
+    display_2_frames(shot[0], shot[-1])
 
