@@ -20,8 +20,6 @@ def get_shots(video, threshold):
             t += cv2.compareHist(previous[ti], current[ti], cv.CV_COMP_CORREL)
         t = t / len(current)
 
-        print str(t)
-
         if t < threshold:
             shots.append(Video(frames = [video[i]]))
         else:

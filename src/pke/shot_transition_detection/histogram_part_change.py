@@ -21,8 +21,6 @@ def get_shots(video, (px, py), similar_threshold, minimum_threshold):
             if v >= similar_threshold:
                 t += 1
 
-        print str(t)
-
         # 0.9 est un peu prix au hasard ici...mais ça marche pour cet exemple !
         if t < minimum_threshold:
             shots.append(Video(frames = [video[i]]))
