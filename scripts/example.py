@@ -17,7 +17,7 @@ if len(sys.argv) != 2:
 
 video = Video(filepath = sys.argv[1])
 
-shots = get_shots(video)
+shots = get_shots(video, 0.9)
 
 keyframes = []
 for i in xrange(len(shots)):
