@@ -33,6 +33,10 @@ def display_histogram(frame):
     cv2.imshow('colorhist',h)
     cv2.waitKey(0)
 
+def display_frame(f1):
+    cv2.imshow("test", f1.getCVFrame())
+    cv2.waitKey()
+
 
 def display_2_frames(f1, f2):
     f1 = f1.getCVFrame()

@@ -34,6 +34,10 @@ def opticalFlow(frame1, frame2):
 def get_keyframe(video):
     selected_min = None
     selected_max = None
+
+    if len(video) == 1:
+        return (video[0], video[0])
+
     for i in range(len(video) - 1):
         frame1 = video[i]
         frame2 = video[i + 1]
