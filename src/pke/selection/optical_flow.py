@@ -31,7 +31,7 @@ def opticalFlow(frame1, frame2):
     return mean_motion
 
 
-def get_keyframe(video):
+def get_frames(video):
     selected_min = None
     selected_max = None
 
