@@ -16,6 +16,9 @@ class Frame(object):
     def getCVFrame(self):
         return self.cv_frame
 
+    def save(self, path):
+        cv2.imwrite(path, self.getCVFrame())
+
     def getGrayscaleHistogram(self):
         if self.gray_histogram != None:
             return [self.gray_histogram]

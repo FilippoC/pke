@@ -31,7 +31,7 @@ def opticalFlow(frame1, frame2):
     return mean_motion
 
 
-def get_frames(video):
+def get_frames(video, penalty = lambda r: 1):
     selected_min = None
     selected_max = None
 
@@ -43,6 +43,8 @@ def get_frames(video):
         frame2 = video[i + 1]
 
         m = opticalFlow(frame1.getCVFrame(), frame2.getCVFrame())
+        m = m * penalty(i)
+
         if selected_min == None:
             selected_min = (m, frame1)
             selected_max = (m, frame2)
